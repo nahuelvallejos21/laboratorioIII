@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primer Parcial Laboratorio III</title>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="app.js" type="text/javascript"></script>
+
+</head>
+<body style="background-color:#e6e6ff">
+    <div class="container" >
+            <h2>VALLEJOS NAHUEL</h2>
+<h2>ABM - PERROS</h2>
+<table class="table" style="width:100%;background-color">
+	<tr>
+		<td width="40%">
+			<table class="table table-hover" style="background-color: #99d6ff">
+				<tr>
+					<td>Tamanio</td>
+					<td><input type="text" id="tamaño"></td>
+				</tr>
+				<tr>
+					<td>Edad</td>
+					<td><input type="text" id="edad"></td>
+				</tr>
+				<tr>
+					<td>Precio</td>
+					<td><input type="text" id="precio"></td>
+				</tr>
+				<tr>
+					<td>Nombre</td>
+					<td><input type="text" id="nombre"></td>
+                </tr>
+                <tr>
+
+                </tr>
+				<tr>
+					<td>Raza:</td>
+					<td><select id="raza" >
+            				<option>Salchicha</option>
+            				<option>Caniche</option>
+            				<option>Labrador</option>
+        				    </select>
+					</td>
+				</tr>
+				<tr>
+					<td>Foto:</td>
+					<td><input type="file" id="foto" onchange = "PrimerParcial.Manejadora.CargarFoto()"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><img src="https://i.pinimg.com/236x/04/02/c9/0402c9bee55284aea0eb70be8f1824da--color-style.jpg" id = "imgFoto"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input id = "btnCargar" type="button" class="btn btn-success" value="Agregar JSON" onclick="PrimerParcial.Manejadora.AgregarPerroJSON()">
+          					<input type="button" class="btn btn-primary" value="Mostrar JSON" onclick="PrimerParcial.Manejadora.MostrarPerrosJSON()">
+						<input type="button" class="btn btn-default" value="Agregar en BD" id = "btnAgregar" onclick="PrimerParcial.Manejadora.AgregarPerroEnBaseDeDatos()">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="button" class="btn btn-default" style="background-color: red;color:white;" value="Verificar y Agregar BD" onclick="PrimerParcial.Manejadora.VerificarExistencia()">
+						<input type="button" class="btn btn-default" style="background-color: orange;color:white;" value="Mostrar BD" onclick="PrimerParcial.Manejadora.MostrarBD()">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" class="btn btn-default" style="background-color:white;color:black;" value="Obtener Perros por tamaño" onclick="PrimerParcial.Manejadora.ObtenerPerrosPorTamaño()"></td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<div id="divTabla" style="background-color:#ccccff"> Listado Aqui....</div>
+		</td>
+	</tr>
+</table>
+
+  </div>
+</body>
+</html>
